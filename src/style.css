@@ -52,13 +52,8 @@ button.button-f:hover {
   background: #5b5b5c;
   border-color: #5b5b5c;
 }
-
-button.degree-button {
-  padding-right: 30px;
-}
-
-div.degree-toggle {
-  margin-left: 40px;
+div.degree-button {
+  margin-left: 5px;
 }
 
 h1 {
@@ -74,9 +69,15 @@ h2.current-weather {
 }
 
 p.temperature {
-  font-size: 120px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 0.8;
+  display: inline;
+  text-align: left;
+}
+
+div.current-info {
+  margin-left: 50px;
 }
 
 h2.carousel {
@@ -97,16 +98,9 @@ h5.h5-min-max {
   margin-bottom: 0;
 }
 
-img.current-weather {
-  margin-left: 100px;
-  width: 200px;
-  height: 200px;
-}
-
-div.current-info {
-  margin-left: 20px;
-  padding: 0;
-  text-align: right;
+img.weather-icon {
+  width: 120px;
+  height: 120px;
 }
 
 div.degree-toggle {
@@ -126,14 +120,16 @@ h5.min-max {
 }
 
 .container {
+  margin: 0 auto;
   margin-top: 40px;
+  width: 900px;
 }
 
 .c-main {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border: none;
   box-shadow: 0px 8px 15px 5px rgba(0, 0, 0, 0.2);
-  min-width: 1100px;
+  width: 900px;
 }
 
 .search-bar-row {
@@ -150,11 +146,11 @@ h5.min-max {
 .img-humidity-large {
   font-size: 30px;
   margin-top: 15px;
-  margin-left: 224px;
+  margin-left: 10px;
 }
 
 .img-humidity-large {
-  color: #047bfe;
+  color: #9a9c9e;
 }
 
 .p-humidity-large,
@@ -187,11 +183,11 @@ h5.min-max {
 }
 
 .img-humidity-small {
-  color: #047bfe;
+  color: #9a9c9e;
 }
 
 .all-weather-cards {
-  margin: 10px 0px;
+  margin: 0;
   padding: 0px 24px;
 }
 
@@ -206,6 +202,6 @@ h5.min-max {
 }
 
 .code-link {
-  margin-left: 150px;
+  margin-left: 300px;
   padding-top: 10px;
 }

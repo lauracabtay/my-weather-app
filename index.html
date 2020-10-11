@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,20 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
-
 <body>
     <div class="container">
-        <!--Start Container-->
         <div class="card c-main">
-            <!--Start Card-->
             <div class="card-body cb-main">
-                <!--Start Card Body-->
                 <form id="search-form">
-                    <!--Start Search Bar-->
                     <div class="row search-bar-row">
-                        <!--Start Search Bar Row-->
                         <div class="col-11 search-bar">
-                            <!--Start Search Bar Col-9-->
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" id="city-input"
                                     placeholder="Enter a town or city" autocomplete=off; />
@@ -36,54 +28,27 @@
                                 </div>
                             </div>
                         </div>
-                        <!--End Search Bar Col-9-->
                         <div class="col-1 current-location" id="current-location">
-                            <!--Start Search Bar Col-1-->
                             <div class="input-group-prepend">
                                 <button type="button" class="btn btn-light location">
                                     <i class="fas fa-location-arrow"></i>
                                 </button>
                             </div>
                         </div>
-                        <!--End Search Bar Col-1-->
                     </div>
-                    <!--End Search Bar Row-->
                 </form>
-                <!--End Search Bar-->
                 <div class="row current-weather">
-                    <!--Start Current Info-->
-                    <div class="col-5 col-5-today">
-                        <!--Start Current Info Col-4-->
+                    <div class="col-5">
                         <h1 id="city">_</h1>
                         <h2 class="current-day"></h2>
-                        <h2 class="current-weather" id="current-weather">_</h2>
+                        <h2 class="current-weather" id="current-weather"></h2>
                     </div>
-                    <!--End Current Info Col-4-->
-                    <div class="col-1 col-3-today">
-                        <!--Start Current Info Col-2-->
-                        <img src="images/Sunshine.png" alt="sunny" class="current-weather" />
+                    <div class="col-1 current-weather">
+                        <img src="images/Sunshine.png" alt="sunny" class="weather-icon" />
                     </div>
-                    <!--End Current Info Col-2-->
-                    <div class="col-4 current-info">
-                        <!--Start Current Info Col-3-->
-                        <div class="row-1">
-                            <p class="temperature" id="temperature-now">_</p>
-                        </div>
-                        <div class="row-humidity">
-                            <i class="fas fa-cloud-rain img-humidity img-humidity-large"></i>
-                            <span>
-                                <p class="p-humidity-large" id="current-humidity">_%</p>
-                            </span>
-                        </div>
-                        <div class="row-wind">
-                            <i class="fas fa-wind img-wind img-wind-large"></i>
-                            <span>
-                                <p class="p-wind-large" id="current-wind-speed">_ mph</p>
-                            </span>
-                        </div>
-                    </div>
-                    <!--End Current Info Col-3-->
-                    <div class="col-1 degree-toggle">
+                    <div class="col-2 current-info">
+                            <p class="temperature" id="temperature-now">
+                            </p>
                         <div class="btn-group degree-button" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-primary button-c" id="button-c">
                                 °C
@@ -93,13 +58,24 @@
                             </button>
                         </div>
                     </div>
+                    <div class="col-3">
+                        <div class="row-humidity">
+                            <i class="fas fa-cloud-rain img-humidity img-humidity-large"></i>
+                                <span>
+                                    <p class="p-humidity-large" id="current-humidity"></p>
+                                </span>
+                            </div>
+                            <div class="row-wind">
+                                <i class="fas fa-wind img-wind img-wind-large"></i>
+                                <span>
+                                    <p class="p-wind-large" id="current-wind-speed"></p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!--End Current Info-->
             <div class="card c-carousel">
-                <!-- Start of the carousel -->
                 <div class="card-body cb-carousel">
-                    <!-- Start of the carousel body-->
                     <div class="row row-cols-1 row-cols-md-5">
                         <div class="col mb-4 all-weather-cards text-center">
                             <div class="card h-100 weather-card">
@@ -167,17 +143,22 @@
                                 <div class="card-body">
                                     <h5 class="min-max">
                                         <strong class="min-max"">19°</strong>|12°
-                      </h5>
-                      <i
-                        class=" fas fa-cloud-rain img-humidity img-humidity-small">
-                                            </i>
-                                            <span>
-                                                <p class="p-humidity-small">60%</p>
-                                            </span></br>
-                                            <i class="fas fa-wind img-wind img-wind-small"> </i>
-                                            <span>
-                                                <p class="p-wind-small">30 mph</p>
-                                            </span>
+                                    </h5>
+                                    <i
+                                    class=" fas fa-cloud-rain img-humidity img-humidity-small">
+                                  </i>
+                                  <span>
+                                      <p class="p-humidity-small">
+                                          60%
+                                        </p>
+                                    </span></br>
+                                    <i class="fas fa-wind img-wind img-wind-small">
+                                    </i>
+                                    <span>
+                                        <p class="p-wind-small">
+                                            30 mph
+                                        </p>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -203,20 +184,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- End of the carousel body -->
             </div>
-            <!-- End of the carousel -->
         </div>
-        <!--End Card Body-->
     </div>
-    <!--End Card-->
-    </div>
-    <!--End Container-->
     <script src="src/script.js"></script>
     <p class="code-link">
         <a href="https://github.com/lauracabtay/my-weather-app">Open-source code</a> 
         by Laura Cabantous
     </p>
 </body>
-
 </html>
