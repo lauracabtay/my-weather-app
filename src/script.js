@@ -16,7 +16,6 @@ let days = [
 let currentDay = days[currentDate.getDay()];
 let currentHour = currentDate.getHours();
 let currentMinute = currentDate.getMinutes();
-return `${currentDay}, ${currentHour}:${currentMinute}`;
 
 if (currentHour < 10) {
   currentHour = `0${currentHour}`;
@@ -24,6 +23,7 @@ if (currentHour < 10) {
 if (currentMinute < 10) {
   currentMinute = `0${currentMinute}`;
 }
+return `${currentDay}, ${currentHour}:${currentMinute}`;
 }
 
 // Feature 2 -  Connect Open Weather API - When searching city, display city name and weather info
