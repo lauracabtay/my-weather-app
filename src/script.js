@@ -38,7 +38,8 @@ function showWeather(response) {
   temp.innerHTML = Math.round(response.data.main.temp);
 
   let description = document.querySelector("#current-weather");
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
+  
   let humidity = document.querySelector("#current-humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
 
