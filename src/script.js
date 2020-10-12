@@ -1,5 +1,7 @@
 // Feature 1 - Display the current day and time (e.g. Thursday 15:03)
-let currentDate = new Date();
+
+function formatDate(timestamp) {
+let currentDate = new Date(timestamp);
 
 let days = [
   "Sunday",
@@ -14,6 +16,7 @@ let days = [
 let currentDay = days[currentDate.getDay()];
 let currentHour = currentDate.getHours();
 let currentMinute = currentDate.getMinutes();
+return `${currentDay}, ${currentHour}:${currentMinute}`;
 
 if (currentHour < 10) {
   currentHour = `0${currentHour}`;
@@ -21,13 +24,7 @@ if (currentHour < 10) {
 if (currentMinute < 10) {
   currentMinute = `0${currentMinute}`;
 }
-
-function now() {
-  let today = document.querySelector(".current-day");
-  today.innerHTML = `${currentDay}, ${currentHour}:${currentMinute}`;
 }
-
-now();
 
 // Feature 2 -  Connect Open Weather API - When searching city, display city name and weather info
 function showWeather(response) {
@@ -39,12 +36,15 @@ function showWeather(response) {
 
   let description = document.querySelector("#current-weather");
   description.innerHTML = response.data.weather[0].description;
-  
+
   let humidity = document.querySelector("#current-humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
 
   let windSpeed = document.querySelector("#current-wind-speed");
   windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} mph`;
+
+  let date = document.querySelector("#date");
+  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function search(city) {
