@@ -147,10 +147,7 @@ h5.min-max {
   font-size: 30px;
   margin-top: 15px;
   margin-left: 10px;
-}
-
-.img-humidity-large {
-  color: #9a9c9e;
+  color: #343a40;
 }
 
 .p-humidity-large,
@@ -180,10 +177,7 @@ h5.min-max {
   font-size: 20px;
   margin-top: 15px;
   display: inline;
-}
-
-.img-humidity-small {
-  color: #9a9c9e;
+  color: #343a40;
 }
 
 .all-weather-cards {
