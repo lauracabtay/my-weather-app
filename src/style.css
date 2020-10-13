@@ -1,7 +1,8 @@
 button.location {
-  background: #e2e6ea;
+  background: #ffffff;
   display: block;
   margin: 0;
+  border-color: #e2e6ea;
 }
 
 button.location:hover {
