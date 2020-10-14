@@ -53,12 +53,58 @@ function showWeather(response) {
 
 }
 
+function showForecast(response) {
+
+  //Forecast time
+let timeFirstForecast = document.querySelector("#forecast-time-1");
+timeFirstForecast.innerHTML = response.data.list[1].dt_txt.slice(11, 16);
+
+let timeSecondForecast = document.querySelector("#forecast-time-2");
+timeSecondForecast.innerHTML = response.data.list[2].dt_txt.slice(11, 16);
+
+let timeThirdForecast = document.querySelector("#forecast-time-3");
+timeThirdForecast.innerHTML = response.data.list[3].dt_txt.slice(11, 16);
+
+let timeFourthForecast = document.querySelector("#forecast-time-4");
+timeFourthForecast.innerHTML = response.data.list[4].dt_txt.slice(11, 16);
+
+let timeFifthForecast = document.querySelector("#forecast-time-5");
+timeFifthForecast.innerHTML = response.data.list[5].dt_txt.slice(11, 16);
+
+  //Forecast icon
+let iconFirstForecast = document.querySelector("#forecast-image-1");
+iconFirstForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[1].weather[0].icon}@2x.png`);
+iconFirstForecast.setAttribute("alt", response.data.list[1].weather[0].description);
+
+let iconSecondForecast = document.querySelector("#forecast-image-2")
+iconSecondForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[2].weather[0].icon}@2x.png`);
+iconSecondForecast.setAttribute("alt", response.data.list[2].weather[0].description);
+
+let iconThirdForecast = document.querySelector("#forecast-image-3")
+iconThirdForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[3].weather[0].icon}@2x.png`);
+iconThirdForecast.setAttribute("alt", response.data.list[3].weather[0].description);
+
+let iconFourthForecast = document.querySelector("#forecast-image-4")
+iconFourthForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[4].weather[0].icon}@2x.png`);
+iconFourthForecast.setAttribute("alt", response.data.list[4].weather[0].description);
+
+let iconFifthForecast = document.querySelector("#forecast-image-5")
+iconFifthForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[5].weather[0].icon}@2x.png`);
+iconFifthForecast.setAttribute("alt", response.data.list[5].weather[0].description);
+
+  //Forecast temp-min
+
+}
+
 function search(city) {
   let apiKey = "528c21b30b50eb31aa5276a8d38b3d22";
   let unit = "metric";
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
+
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function searchCity(event) {
