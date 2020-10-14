@@ -32,7 +32,8 @@ function showWeather(response) {
   city.innerHTML = response.data.name;
 
   let temp = document.querySelector("#temperature-now");
-  temp.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  temp.innerHTML = Math.round(celsiusTemperature);
 
   let description = document.querySelector("#current-weather");
   description.innerHTML = response.data.weather[0].description;
@@ -49,6 +50,7 @@ function showWeather(response) {
   let icon = document.querySelector("#weather-icon");
   icon.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   icon.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 function search(city) {
@@ -71,7 +73,6 @@ function searchCity(event) {
   search(city);
 }
 
-search("London");
 
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCity);
@@ -93,5 +94,42 @@ function searchLocation() {
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
 
+// Temperature conversion to Fahrenheit
+
+function convertToF(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature-now");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+  fahrenheitButton.classList.remove("btn-dark", "button-f");
+  fahrenheitButton.classList.add("btn-primary", "button-c");
+  celsiusButton.classList.remove("btn-primary", "button-c");
+  celsiusButton.classList.add("btn-dark", "button-f");
+}
+
+// Temperature conversion to Celsius
+
+function convertToC(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temperature-now");
+  tempElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitButton.classList.add("btn-dark", "button-f");
+  fahrenheitButton.classList.remove("btn-primary", "button-c");
+  celsiusButton.classList.add("btn-primary", "button-c");
+  celsiusButton.classList.remove("btn-dark", "button-f");
+}
+
 let geolocationButton = document.querySelector("#current-location");
 geolocationButton.addEventListener("click", searchLocation);
+
+
+let fahrenheitButton = document.querySelector("#button-f");
+fahrenheitButton.addEventListener("click", convertToF);
+
+let celsiusButton = document.querySelector("#button-c");
+celsiusButton.addEventListener("click", convertToC);
+
+let celsiusTemperature = null;
+
+
+search("London");
