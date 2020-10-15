@@ -76,24 +76,71 @@ let iconFirstForecast = document.querySelector("#forecast-image-1");
 iconFirstForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[1].weather[0].icon}@2x.png`);
 iconFirstForecast.setAttribute("alt", response.data.list[1].weather[0].description);
 
-let iconSecondForecast = document.querySelector("#forecast-image-2")
+let iconSecondForecast = document.querySelector("#forecast-image-2");
 iconSecondForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[2].weather[0].icon}@2x.png`);
 iconSecondForecast.setAttribute("alt", response.data.list[2].weather[0].description);
 
-let iconThirdForecast = document.querySelector("#forecast-image-3")
+let iconThirdForecast = document.querySelector("#forecast-image-3");
 iconThirdForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[3].weather[0].icon}@2x.png`);
 iconThirdForecast.setAttribute("alt", response.data.list[3].weather[0].description);
 
-let iconFourthForecast = document.querySelector("#forecast-image-4")
+let iconFourthForecast = document.querySelector("#forecast-image-4");
 iconFourthForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[4].weather[0].icon}@2x.png`);
 iconFourthForecast.setAttribute("alt", response.data.list[4].weather[0].description);
 
-let iconFifthForecast = document.querySelector("#forecast-image-5")
+let iconFifthForecast = document.querySelector("#forecast-image-5");
 iconFifthForecast.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.list[5].weather[0].icon}@2x.png`);
 iconFifthForecast.setAttribute("alt", response.data.list[5].weather[0].description);
 
-  //Forecast temp-min
+  //Forecast temp-max
+let maxTempFirstForecast = document.querySelector("#forecast-max-temp-1");
+maxTempFirstForecast.innerHTML = Math.round(response.data.list[0].main.temp);
 
+let maxTempSecondForecast = document.querySelector("#forecast-max-temp-2");
+maxTempSecondForecast.innerHTML = Math.round(response.data.list[1].main.temp);
+
+let maxTempThirdForecast = document.querySelector("#forecast-max-temp-3");
+maxTempThirdForecast.innerHTML = Math.round(response.data.list[2].main.temp);
+
+let maxTempFourthForecast = document.querySelector("#forecast-max-temp-4");
+maxTempFourthForecast.innerHTML = Math.round(response.data.list[3].main.temp);
+
+let maxTempFifthForecast = document.querySelector("#forecast-max-temp-5");
+maxTempFifthForecast.innerHTML = Math.round(response.data.list[4].main.temp);
+
+
+//Forecast humidity
+let humidityFirstForecast = document.querySelector("#forecast-humidity-1");
+humidityFirstForecast.innerHTML = `${Math.round(response.data.list[0].main.humidity)}%`;
+
+let humiditySecondForecast = document.querySelector("#forecast-humidity-2");
+humiditySecondForecast.innerHTML = `${Math.round(response.data.list[1].main.humidity)}%`;
+
+let humidityThirdForecast = document.querySelector("#forecast-humidity-3");
+humidityThirdForecast.innerHTML = `${Math.round(response.data.list[2].main.humidity)}%`;
+
+let humidityFourthForecast = document.querySelector("#forecast-humidity-4");
+humidityFourthForecast.innerHTML = `${Math.round(response.data.list[3].main.humidity)}%`;
+
+let humidityFifthForecast = document.querySelector("#forecast-humidity-5");
+humidityFifthForecast.innerHTML = `${Math.round(response.data.list[4].main.humidity)}%`;
+
+//Forecast wind speed
+let windFirstForecast = document.querySelector("#forecast-wind-1");
+console.log(response);
+windFirstForecast.innerHTML = `${Math.round(response.data.list[0].wind.speed)} mph`;
+
+let windSecondForecast = document.querySelector("#forecast-wind-2");
+windSecondForecast.innerHTML = `${Math.round(response.data.list[1].wind.speed)} mph`;
+
+let windThirdForecast = document.querySelector("#forecast-wind-3");
+windThirdForecast.innerHTML = `${Math.round(response.data.list[2].wind.speed)} mph`;
+
+let windFourthForecast = document.querySelector("#forecast-wind-4");
+windFourthForecast.innerHTML = `${Math.round(response.data.list[3].wind.speed)} mph`;
+
+let windFifthForecast = document.querySelector("#forecast-wind-5");
+windFifthForecast.innerHTML = `${Math.round(response.data.list[4].wind.speed)} mph`;
 }
 
 function search(city) {

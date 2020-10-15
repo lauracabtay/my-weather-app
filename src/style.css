@@ -78,8 +78,13 @@ div.current-info {
 }
 
 h2.carousel {
+  font-size: 22px;
   font-weight: 700;
   margin-top: 10px;
+  color: #7993a3;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 0;
+  font-weight: 900;
 }
 
 button,
@@ -88,11 +93,11 @@ h2.current-day,
 h2.current-weather,
 p,
 fa-location-arrow,
-h2.carousel,
-h5.h5-min-max {
+.hour-temp {
   color: #343a40;
   font-family: "Roboto Mono", monospace;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 img.weather-icon {
@@ -112,8 +117,8 @@ div.row-wind {
   text-align: left;
 }
 
-h5.min-max {
-  font-size: 22px;
+h5.hour-temp {
+  font-size: 24px;
 }
 
 .container {
@@ -190,6 +195,10 @@ h5.min-max {
 .weather-card {
   border: none;
   box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding-top: 0;
 }
 
 .code-link {
