@@ -50,7 +50,7 @@ button.button-f:hover {
   border-color: #5b5b5c;
 }
 div.degree-button {
-  margin-left: 5px;
+  margin-left: 2px;
 }
 
 h1 {
@@ -70,7 +70,6 @@ p.temperature {
   font-weight: 700;
   line-height: 0.8;
   display: inline;
-  text-align: left;
 }
 
 div.current-info {
@@ -177,9 +176,12 @@ h5.hour-temp {
 .img-wind-small,
 .img-humidity-small {
   font-size: 20px;
-  margin-top: 15px;
   display: inline;
   color: #343a40;
+}
+
+.img-humidity-small {
+  margin-top: 15px;
 }
 
 .all-weather-cards {
