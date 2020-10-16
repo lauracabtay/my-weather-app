@@ -122,9 +122,6 @@ function searchCity(event) {
   search(city);
 }
 
-let searchButton = document.querySelector("#search-form");
-searchButton.addEventListener("submit", searchCity);
-
 //Geolocation
 function searchCurrentLocation(position) {
   let lat = position.coords.latitude;
@@ -137,6 +134,9 @@ function searchCurrentLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
 }
+
+let searchButton = document.querySelector("#search-form");
+searchButton.addEventListener("submit", searchCity);
 
 function searchLocation() {
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
