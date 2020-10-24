@@ -390,17 +390,17 @@ h5.hour-temp {
   }
 
   p.temperature {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   img.weather-icon {
-    width: 60px;
+    width: 40px;
     height: auto;
   }
 
   .img-wind-large,
   .img-humidity-large {
-    font-size: 14px;
+    font-size: 12px;
     display: block;
   }
 
