@@ -393,14 +393,19 @@ h5.hour-temp {
     font-size: 24px;
   }
 
+  img.weather-icon {
+    width: 60px;
+    height: auto;
+  }
+
   .img-wind-large,
   .img-humidity-large {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .p-wind-large,
   .p-humidity-large {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     margin-left: 0;
   }
@@ -413,8 +418,7 @@ h5.hour-temp {
     width: 30%;
   }
 
-  img.weather-icon {
-    width: 60px;
-    height: auto;
+  .col-3 {
+    display: block;
   }
 }
