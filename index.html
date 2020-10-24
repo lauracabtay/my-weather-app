@@ -1,91 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/5faa5be38e.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/5faa5be38e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="card c-main">
-            <div class="card-body cb-main">
-                <form id="search-form">
-                    <div class="row search-bar-row">
-                        <div class="col-11 search-bar">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" id="city-input"
-                                    placeholder="Enter a town or city" autocomplete=off/>
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary search" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-1 current-location" id="current-location">
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-light location">
-                                    <i class="fas fa-location-arrow"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="row current-weather">
-                    <div class="col-5">
-                        <h1 id="city"></h1>
-                        <h2 class="current-day" id="date"></h2>
-                        <h2 class="current-weather" id="current-weather"></h2>
-                    </div>
-                    <div class="col-1 current-weather">
-                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="sunny" class="weather-icon" id="weather-icon" />
-                    </div>
-                    <div class="col-2 current-info">
-                            <p class="temperature" id="temperature-now">
-                            </p>
-                        <div class="btn-group degree-button" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary button-c" id="button-c">
-                                °C
-                            </button>
-                            <button type="button" class="btn btn-dark button-f" id="button-f">
-                                °F
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="row-humidity">
-                            <i class="fas fa-cloud-rain img-humidity img-humidity-large"></i>
-                                <span>
-                                    <p class="p-humidity-large" id="current-humidity"></p>
-                                </span>
-                            </div>
-                            <div class="row-wind">
-                                <i class="fas fa-wind img-wind img-wind-large"></i>
-                                <span>
-                                    <p class="p-wind-large" id="current-wind-speed"></p>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+      <div class="card c-main">
+        <div class="card-body cb-main">
+          <form id="search-form">
+            <div class="row search-bar-row">
+              <div class="col-11 search-bar">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city-input"
+                    placeholder="Enter a town or city"
+                    autocomplete="off"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary search"
+                      type="submit"
+                    >
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
                 </div>
-            <div class="card c-carousel">
-                <div class="card-body cb-carousel">
-                    <div class="row row-cols-1 row-cols-md-5" id="forecast">
-                    </div>
+              </div>
+              <div class="col-1 current-location" id="current-location">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-light location">
+                    <i class="fas fa-location-arrow"></i>
+                  </button>
                 </div>
+              </div>
             </div>
+          </form>
+          <div class="row current-weather">
+            <div class="col-5">
+              <h1 id="city"></h1>
+              <h2 class="current-day" id="date"></h2>
+              <h2 class="current-weather" id="current-weather"></h2>
+            </div>
+            <div class="col-1 current-weather">
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="sunny"
+                class="weather-icon"
+                id="weather-icon"
+              />
+            </div>
+            <div class="col-2 current-info">
+              <p class="temperature" id="temperature-now"></p>
+              <div
+                class="btn-group degree-button"
+                role="group"
+                aria-label="Basic example"
+              >
+                <button
+                  type="button"
+                  class="btn btn-primary button-c"
+                  id="button-c"
+                >
+                  °C
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-dark button-f"
+                  id="button-f"
+                >
+                  °F
+                </button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="row-humidity">
+                <i
+                  class="fas fa-cloud-rain img-humidity img-humidity-large"
+                ></i>
+                <span>
+                  <p class="p-humidity-large" id="current-humidity"></p>
+                </span>
+              </div>
+              <div class="row-wind">
+                <i class="fas fa-wind img-wind img-wind-large"></i>
+                <span>
+                  <p class="p-wind-large" id="current-wind-speed"></p>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="card c-carousel">
+          <div class="card-body cb-carousel">
+            <div class="row row-cols-1 row-cols-md-5" id="forecast"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="src/script.js"></script>
     <p class="code-link">
-        <a href="https://github.com/lauracabtay/my-weather-app">Open-source code</a> 
-        by Laura Cabantous
+      <a href="https://github.com/lauracabtay/my-weather-app"
+        >Open-source code</a
+      >
+      by Laura Cabantous
     </p>
-</body>
+  </body>
 </html>

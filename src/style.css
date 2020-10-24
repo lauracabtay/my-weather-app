@@ -34,7 +34,7 @@ button.search:hover {
 
 div.search-bar {
   padding-left: 0;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 button.button-c {
@@ -49,6 +49,7 @@ button.button-f:hover {
   background: #5b5b5c;
   border-color: #5b5b5c;
 }
+
 div.degree-button {
   margin-left: 2px;
 }
@@ -123,14 +124,14 @@ h5.hour-temp {
 .container {
   margin: 0 auto;
   margin-top: 40px;
-  width: 900px;
+  max-width: 900px;
 }
 
 .c-main {
   background-image: linear-gradient(120deg, #a3c8df 0%, #ebedee 100%);
   border: none;
   box-shadow: 0px 8px 15px 5px rgba(0, 0, 0, 0.2);
-  width: 900px;
+  max-width: 900px;
 }
 
 .search-bar-row {
@@ -186,7 +187,7 @@ h5.hour-temp {
 
 .all-weather-cards {
   margin: 0;
-  padding: 0px 24px;
+  padding: 0px 20px;
 }
 
 .c-carousel {
@@ -204,6 +205,153 @@ h5.hour-temp {
 }
 
 .code-link {
-  margin-left: 300px;
+  text-align: center;
   padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .search-bar-row {
+    width: 90%;
+  }
+  .all-weather-cards {
+    min-width: 50%;
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p.temperature {
+    font-size: 60px;
+  }
+
+  .img-wind-large,
+  .img-humidity-large {
+    font-size: 26px;
+  }
+
+  .p-wind-large,
+  .p-humidity-large {
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 770px) {
+  .search-bar-row {
+    width: 90%;
+  }
+  .all-weather-cards {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p.temperature {
+    font-size: 48px;
+  }
+
+  .img-wind-large,
+  .img-humidity-large {
+    font-size: 22px;
+  }
+
+  .p-wind-large,
+  .p-humidity-large {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p.temperature {
+    font-size: 40px;
+  }
+
+  .img-wind-large,
+  .img-humidity-large {
+    font-size: 18px;
+  }
+
+  .p-wind-large,
+  .p-humidity-large {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 660px) {
+  .search-bar-row {
+    width: 90%;
+  }
+
+  .all-weather-cards {
+    max-width: 100%;
+  }
+
+  img.weather-icon {
+    width: 80px;
+    height: auto;
+    padding-left: 0;
+  }
+
+  div.current-info {
+    margin-left: 30px;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  p.temperature {
+    font-size: 34px;
+  }
+
+  .img-wind-large,
+  .img-humidity-large {
+    font-size: 14px;
+  }
+
+  .p-wind-large,
+  .p-humidity-large {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 0;
+  }
+
+  .current-weather {
+    padding-left: 0;
+  }
+
+  .col-5 {
+    width: 30%;
+  }
 }
