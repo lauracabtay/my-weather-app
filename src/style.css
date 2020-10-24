@@ -241,6 +241,7 @@ h5.hour-temp {
     font-weight: 700;
   }
 }
+
 @media (max-width: 770px) {
   .search-bar-row {
     width: 90%;
@@ -273,6 +274,11 @@ h5.hour-temp {
   .p-humidity-large {
     font-size: 20px;
     font-weight: 700;
+  }
+  .button-c,
+  .button-f {
+    padding: 5px;
+    font-size: 12px;
   }
 }
 
@@ -405,5 +411,10 @@ h5.hour-temp {
 
   .col-5 {
     width: 30%;
+  }
+
+  img.weather-icon {
+    width: 60px;
+    height: auto;
   }
 }
