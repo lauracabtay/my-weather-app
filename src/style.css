@@ -243,9 +243,6 @@ h5.hour-temp {
 }
 
 @media (max-width: 770px) {
-  .search-bar-row {
-    width: 90%;
-  }
   .all-weather-cards {
     max-width: 30%;
   }
@@ -358,19 +355,6 @@ h5.hour-temp {
   }
 }
 
-@media (max-width: 660px) {
-  img.weather-icon {
-    width: 80px;
-    height: auto;
-    padding-left: 0;
-  }
-
-  div.current-info {
-    margin-left: 30px;
-    padding-left: 0;
-  }
-}
-
 @media (max-width: 480px) {
   .search-bar-row {
     width: 80%;
@@ -416,6 +400,10 @@ h5.hour-temp {
   }
 
   .col-5 {
-    width: 30%;
+    width: 40%;
+  }
+
+  .current-location {
+    padding-left: 0;
   }
 }
