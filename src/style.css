@@ -367,7 +367,7 @@ h5.hour-temp {
 
 @media (max-width: 480px) {
   .search-bar-row {
-    width: 80%;
+    width: 50%;
   }
 
   h1 {
