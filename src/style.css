@@ -303,10 +303,6 @@ h5.hour-temp {
 }
 
 @media (max-width: 660px) {
-  .search-bar-row {
-    width: 90%;
-  }
-
   .all-weather-cards {
     max-width: 100%;
   }
@@ -343,6 +339,54 @@ h5.hour-temp {
   .p-wind-large,
   .p-humidity-large {
     font-size: 14px;
+    font-weight: 700;
+    margin-left: 0;
+  }
+
+  .current-weather {
+    padding-left: 0;
+  }
+
+  .col-5 {
+    width: 30%;
+  }
+}
+
+@media (max-width: 660px) {
+  img.weather-icon {
+    width: 80px;
+    height: auto;
+    padding-left: 0;
+  }
+
+  div.current-info {
+    margin-left: 30px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar-row {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  p.temperature {
+    font-size: 30px;
+  }
+
+  .img-wind-large,
+  .img-humidity-large {
+    font-size: 12px;
+  }
+
+  .p-wind-large,
+  .p-humidity-large {
+    font-size: 12px;
     font-weight: 700;
     margin-left: 0;
   }
