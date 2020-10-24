@@ -367,16 +367,24 @@ h5.hour-temp {
 
 @media (max-width: 480px) {
   .search-bar-row {
-    width: 50%;
+    width: 80%;
+  }
+
+  .current-location {
+    padding-left: 0;
+  }
+
+  .cb-main {
+    padding-left: 0;
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
   }
 
   p.temperature {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .img-wind-large,
