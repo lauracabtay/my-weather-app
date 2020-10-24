@@ -401,6 +401,7 @@ h5.hour-temp {
   .img-wind-large,
   .img-humidity-large {
     font-size: 14px;
+    display: block;
   }
 
   .p-wind-large,
@@ -416,9 +417,5 @@ h5.hour-temp {
 
   .col-5 {
     width: 30%;
-  }
-
-  .col-3 {
-    display: block;
   }
 }
