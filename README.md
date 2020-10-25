@@ -1,6 +1,6 @@
 # my-weather-app
 
-This repository contains the source code used to build a <a href="https://brave-babbage-248758.netlify.app">weather forecast application</a> developed whilst completing <a href="https://www.shecodes.io/">SheCodes.io</a> Front-End Development and React workshops.
+This repository contains the source code used to build a <a href="https://brave-babbage-248758.netlify.app" target="_blank">weather forecast application</a> developed whilst completing <a href="https://www.shecodes.io/" target="_blank">SheCodes.io</a> Front-End Development and React workshops.
 
 <strong>Note: this app hasn’t been designed for mobile.</strong>
 
@@ -19,7 +19,7 @@ This repository contains the source code used to build a <a href="https://brave-
 
 <br/>
 <strong>
-<a href="https://openweathermap.org/api">Open weather</a>
+<a href="https://openweathermap.org/api" target="_blank">Open weather</a>
 API:
 </strong>
 <ul>
