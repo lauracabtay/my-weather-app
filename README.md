@@ -5,6 +5,7 @@ This repository contains the source code used to build a <a href="https://brave-
 <strong>Note: this app hasn’t been designed for mobile.</strong>
 
 # Built with
+
 <ul>
 <li>HTML</li>
 <li>CSS</li>
@@ -14,7 +15,6 @@ This repository contains the source code used to build a <a href="https://brave-
 <strong>Frameworks:</strong>
 <ul>
 <li>Bootstrap</li>
-<li>React</li>
 </ul>
 
 <br/>
@@ -31,6 +31,7 @@ API:
 <strong>Deployed with Netlify.</strong>
 
 # Features:
+
 <ul>
 <li>Location search</li>
 <li>Geolocation</li>
@@ -39,6 +40,7 @@ API:
 </ul>
 
 # Future additions:
+
 <ul>
-<li>Optimize responsive design</li>
+<li>Optimize CSS and responsive design</li>
 </ul>
